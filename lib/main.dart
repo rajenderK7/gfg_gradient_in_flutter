@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,8 +35,9 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text(
+        title: Text(
           "Gradients in Flutter",
+          style: GoogleFonts.montserrat(fontSize: 24),
         ),
       ),
       body: Center(
@@ -43,34 +45,81 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  height: 200,
-                  width: 300,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [Colors.red.shade700, Colors.yellow],
-                      begin: Alignment.bottomLeft,
-                      end: Alignment.topRight,
-                    ),
-                  ),
+              // For Linear Gradient without stops and tileMode
+              // Padding(
+              //   padding: const EdgeInsets.all(8.0),
+              //   child: Container(
+              //     height: MediaQuery.of(context).size.height * 0.7,
+              //     width: MediaQuery.of(context).size.width * 0.9,
+              //     decoration: BoxDecoration(
+              //       borderRadius: BorderRadius.circular(20),
+              //       gradient: const LinearGradient(
+              //         colors: [Colors.purple, Colors.blueAccent],
+              //         begin: Alignment.bottomLeft,
+              //         end: Alignment.topRight,
+              //       ),
+              //     ),
+              //   ),
+              // ),
+              // For Linear Gradient with stops and tileMode
+              // Padding(
+              //   padding: const EdgeInsets.all(8.0),
+              //   child: Container(
+              //     height: MediaQuery.of(context).size.height * 0.7,
+              //     width: MediaQuery.of(context).size.width * 0.9,
+              //     decoration: BoxDecoration(
+              //       borderRadius: BorderRadius.circular(20),
+              //       gradient: const LinearGradient(
+              //         colors: [Colors.purple, Colors.blueAccent],
+              //         begin: Alignment.bottomLeft,
+              //         end: Alignment.topRight,
+              //         stops: [0.4, 0.7],
+              //         tileMode: TileMode.repeated,
+              //       ),
+              //     ),
+              //   ),
+              // ),
+              // For Radial Gradient without stops and tileMode
+              // Padding(
+              //   padding: const EdgeInsets.all(8.0),
+              //   child: Container(
+              //     height: MediaQuery.of(context).size.height * 0.7,
+              //     width: MediaQuery.of(context).size.width * 0.9,
+              //     decoration: BoxDecoration(
+              //       borderRadius: BorderRadius.circular(20),
+              //       gradient: const RadialGradient(
+              //         colors: [Colors.red, Colors.yellow],
+              //         radius: 0.75,
+              //       ),
+              //     ),
+              //   ),
+              // ),
+              // For Radial Gradient with stops and tileMode
+              // Padding(
+              //   padding: const EdgeInsets.all(8.0),
+              //   child: Container(
+              //     height: MediaQuery.of(context).size.height * 0.7,
+              //     width: MediaQuery.of(context).size.width * 0.9,
+              //     decoration: BoxDecoration(
+              //       borderRadius: BorderRadius.circular(20),
+              //       gradient: const RadialGradient(
+              //         colors: [Colors.red, Colors.yellow],
+              //         radius: 0.75,
+              //         focal: Alignment(0.7, -0.7),
+              //         tileMode: TileMode.clamp,
+              //       ),
+              //     ),
+              //   ),
+              // ),
+              const SizedBox(
+                height: 20,
+              ),
+              Text(
+                "Radial Gradient",
+                style: GoogleFonts.lato(
+                  fontSize: 30,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  height: 200,
-                  width: 300,
-                  decoration: const BoxDecoration(
-                    gradient: RadialGradient(
-                      colors: [Colors.red, Colors.yellow],
-                      radius: 0.6,
-                      // center: Alignment.bottomRight
-                    ),
-                  ),
-                ),
-              )
             ],
           ),
         ),
